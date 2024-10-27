@@ -1,0 +1,36 @@
+{
+  "name": "Chrome Extension Exercise",
+  "short_name": "CMM",
+  "version": "1.0.0",
+  "description": "Chrome Extension Exercise for neuronOS\n",
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "permissions": [
+    "idle",
+    "alarms",
+    "storage", 
+    "identity", 
+    "identity.email"],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "images/*.png", "assets/notification.mp3"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "Chrome Extension Exercise",
+    "default_popup": "dist/index.html"
+  },
+  "background": {
+    "service_worker": "background.js" },
+  "icons": {
+    "16": "assets/16_16.png",
+    "32": "assets/32_32.png",
+    "64": "assets/64_64.png",
+    "128": "assets/128_128.png"
+  },
+  "manifest_version": 3
+}
